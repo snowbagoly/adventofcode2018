@@ -1,13 +1,12 @@
-#first part
-s = """+1
--2
-+3
-+1"""
+from aocd import get_data
 
+s = get_data(day=1,year=2018)
+
+#first part
 print(sum(map(int,s.split("\n"))))
 
 #second part
-*s, = map(int,"+3, +3, +4, -2, -4".split(", "))
+s = list(map(int,s.split("\n")))
 reached = set()
 f = 0
 i = 0
