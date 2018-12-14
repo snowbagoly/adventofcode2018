@@ -11,8 +11,8 @@ def calculate_square(from_x,from_y,to_x,to_y,cells):
 def find_largest_nxn(cells,n):
     max_square = 0
     max_pos = None,None
-    for i in range(len(cells)-n):
-        for j in range(len(cells)-n):
+    for i in range(1,len(cells)-n+1):
+        for j in range(1,len(cells)-n+1):
             square = calculate_square(i,j,i+n,j+n,cells)
             if square > max_square:
                 max_square = square
